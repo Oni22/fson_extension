@@ -5,7 +5,7 @@
     "icon": "images/fsonLogo.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Oni22/flutter_resources.git"
+        "url": "https://github.com/Oni22/fson_extension.git"
     },
     "version": "1.0.0",
     "engines": {

@@ -3,6 +3,7 @@
     "displayName": "fson",
     "description": "fson helps you to build string resources for flutter apps",
     "icon": "images/fsonLogo.png",
+    "publisher": "onurozkan",
     "repository": {
         "type": "git",
         "url": "https://github.com/Oni22/fson_extension.git"

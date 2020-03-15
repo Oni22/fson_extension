@@ -1,0 +1,30 @@
+{
+    "name": "fson",
+    "displayName": "fson",
+    "description": "fson helps you to build string resources for flutter apps",
+    "icon": "images/fsonLogo.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Oni22/flutter_resources.git"
+    },
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.43.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "fson",
+            "aliases": ["fson", "fson"],
+            "extensions": [".fson"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "fson",
+            "scopeName": "source.fson",
+            "path": "./syntaxes/fson.tmLanguage.json"
+        }]
+    }
+}

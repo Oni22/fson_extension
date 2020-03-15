@@ -1,0 +1,91 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "fson",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#object"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.fson",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.fson",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.fson",
+					"match": "\\\\."
+				}
+			]
+		},
+		"plurals": {
+			"begin": "\\[",
+			"beginCaptures": {
+				"0": {
+					"name": "support.function.fson"
+				}
+			},
+			"end": "\\]",
+			"endCaptures": {
+				"0": {
+					"name": "support.function.fson"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#strings"
+				},
+				{
+					"include": "#comma"
+				}
+			]
+		},
+		"object": {
+			"name": "storage.type.fson",
+			"begin": "\\{",
+			"beginCaptures": {
+				"0": {
+					"name": "support.class.fson"
+				}
+			},
+			"end": "\\}",
+			"endCaptures": {
+				"0": {
+					"name": "support.class.fson"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#strings"
+				},
+				{
+					"include": "#plurals"
+				},
+				{
+					"include": "#comma"
+				}
+			]
+		},
+		"comma": {
+			"patterns": [
+				{
+					"match": "\\,",
+					"name": "fson"
+				}
+			]
+		}
+	},
+	"scopeName": "source.fson"
+}

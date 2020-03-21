@@ -23,10 +23,23 @@
 			"name": "string.quoted.double.fson",
 			"begin": "\"",
 			"end": "\"",
+			"beginCaptures": {
+				"0": {
+					"name": "string.quoted.double.fson"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "string.quoted.double.fson"
+				}
+			},
 			"patterns": [
 				{
 					"name": "constant.character.escape.fson",
 					"match": "\\\\."
+				},
+				{
+					"include": "#references"
 				}
 			]
 		},
@@ -85,6 +98,11 @@
 					"name": "fson"
 				}
 			]
+		},
+		"references": {
+			"name": "support.variable.fson",
+			"begin": "\\#\\(",
+			"end": "\\)"
 		}
 	},
 	"scopeName": "source.fson"
